@@ -12,4 +12,4 @@ SELECT standard_amt_usd, gloss_amt_usd, standard_amt_usd + gloss_amt_usd total F
 
 -- Find the standard_amt_usd per unit of standard_qty paper. Your solution should use both an aggregation and a mathematical operator.
 
-select *, SUM(standard_amt_usd)/SUM(price_stand_per_unit) FROM orders 
+select SUM(standard_amt_usd)/SUM(standard_qty) stand_price_unit FROM orders 
