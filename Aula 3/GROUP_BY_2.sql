@@ -17,4 +17,3 @@ SELECT s.name, w.channel, COUNT(w.channel) FROM sales_reps s JOIN accounts a ON 
 -- Determine o número de vezes que um determinado canal foi usado na tabela web_events para cada região. Sua tabela final deve ter três colunas - o nome da região, o canal e o número de ocorrências. Encomende primeiro a tabela com o maior número de ocorrências.
 
 SELECT r.name,w.channel,COUNT(w.channel) FROM sales_reps s JOIN region r ON r.id = s.region_id JOIN accounts a ON a.sales_rep_id = s.id JOIN web_events w ON w.account_id = a.id GROUP BY r.name,w.channel ORDER BY r.name,w.channel
-
